@@ -11,7 +11,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
   try {
     userId = await getAuthUserId();
   } catch (error) {
-    redirect("/sign-in");
+    redirect("/api/auth/logout");
   }
 
   const userDoc = await adminDb.collection("users").doc(userId).get();
