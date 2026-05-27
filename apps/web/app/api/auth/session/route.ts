@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
     const cookieStore = await cookies();
     
     cookieStore.set("session", sessionCookie, {
-      maxAge: expiresIn,
+      maxAge: 60 * 60 * 24 * 5, // maxAge is in seconds
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       path: "/",
