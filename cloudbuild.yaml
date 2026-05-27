@@ -1,0 +1,24 @@
+steps:
+  # Build the container image using Docker build arguments
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/pollaris-497520/pollaris-repo/pollaris-web:latest'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyDWDusjeN1O52eyxO1AsueeGQSoA9vQF-c'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=pollaris-497520.firebaseapp.com'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_PROJECT_ID=pollaris-497520'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=pollaris-497520.firebasestorage.app'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=803271817886'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_APP_ID=1:803271817886:web:6d3bb7829a1b22a1e7998f'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-NT0CWBFWK0'
+      - '.'
+images:
+  - 'us-central1-docker.pkg.dev/pollaris-497520/pollaris-repo/pollaris-web:latest'

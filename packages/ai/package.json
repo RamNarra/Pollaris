@@ -1,0 +1,10 @@
+{
+  "name": "@pollaris/ai",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "@ai-sdk/google-vertex": "^4.0.137",
+    "ai": "^6.0.191"
+  }
+}

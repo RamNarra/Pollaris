@@ -1,0 +1,291 @@
+Online Polling Platform
+1. Brief Description
+Teams and communities frequently need quick, structured input on a question — the date for an
+off-site, the next feature to prioritise, the topic for the next book-club pick. When that input lives
+in chat threads or back-and-forth email, opinions get lost, double-counted, or quietly ignored.
+The task is to build an online polling platform where any authenticated user can create a poll,
+configure how it should behave (single-choice or multi-choice; whether it is public to the team or
+restricted to specific invitees; whether results are visible before voting; when it should close),
+publish it for others to vote on, and review aggregate results once enough people have
+responded.
+Polls can be shared by URL. Public polls show up in the team’s public feed; private polls do not
+appear in the feed and only invited users can find them — even by guessing the link. Voting is
+attributed under the hood (so the system can enforce one vote per person per poll) but
+individual choices are kept private — other viewers see only aggregate counts and percentages.
+The goal is a working end-to-end product. Correct lifecycle handling, correct enforcement of the
+one-vote-per-user rule, and correct results-visibility behaviour matter more than visual polish or
+features beyond what is specified.
+Context &amp; constraints
+• Time-box: 6 hours of focused build time.
+• AI assistance is expected. Any AI coding assistant (Copilot, Cursor, Claude Code,
+ChatGPT, etc.) may be used freely. Scope and quality expectations are calibrated to AI-
+assisted development.
+• Tech stack: fully open. Any language, framework, or storage layer is acceptable.
+• UI polish is welcomed but secondary — clarity, correctness of lifecycle and vote
+enforcement, and a clean data model are primary.
+• Deliverable: a public GitHub repository with a README (see Submission section).
+2. Business Requirements
+• BR1. Allow any authenticated user to create a poll with a question, two or more options,
+and configurable behaviour (single-choice or multi-choice, public or private visibility, when
+results are visible, when the poll closes).
+• BR2. Allow polls to move through a clear lifecycle from Draft (creator editing) to Open
+(accepting votes) to Closed (results frozen).
+• BR3. Support two visibility modes: Public polls are discoverable in the team feed by all
+authenticated users; Private polls are accessible only to users explicitly invited by the
+creator, and never appear in the public feed.
+• BR4. Each poll has a stable shareable URL the creator can copy and distribute. Knowing
+the URL alone does not grant access to a private poll — the user must also be invited.
+• BR5. Allow any authenticated user with access to an Open poll to vote on it.
+• BR6. Enforce one vote-set per user per poll: voters may change their selection while the
+poll is Open, but cannot inflate or fragment counts.
+• BR7. Surface aggregate results (per-option counts and percentages) on each poll.
+Individual voters’ choices remain private.
+
+• BR8. Support a results-visibility setting per poll so the creator can choose whether results
+are visible to everyone who can access the poll immediately or only after they have voted.
+• BR9. Allow polls to be discovered through a browseable list with sensible filters and sort,
+scoped to what the viewer is entitled to see.
+• BR10. Authenticate users and prevent tampering with poll configuration, vote counts, the
+invitee list, or other users’ vote choices.
+• BR11. Persist all data reliably so polls, votes, invitations, and results are not lost between
+sessions or restarts.
+• BR12. Scale gracefully as the catalogue of polls grows, so list and detail views remain
+usable.
+3. Functional Requirements
+3.1 Authentication
+• FR1. Users can register a new account by providing a name, email, and password.
+• FR2. Users can sign in with their email and password.
+• FR3. Users can sign out, ending their session.
+• FR4. All polling-related screens and data are accessible only to authenticated users;
+unauthenticated requests are redirected to sign-in or rejected.
+• FR5. Passwords must be stored hashed (e.g. bcrypt, argon2, scrypt). Plaintext or
+reversibly-encrypted password storage is not acceptable.
+3.2 Poll management
+• FR6. An authenticated user can create a Poll. A Poll captures: title, optional description,
+type (Single-choice or Multi-choice), two or more options (each a text label), visibility
+(Public or Private), results-visibility setting (Always visible or Visible after voting), optional
+end-at datetime, share-token (an unguessable URL-safe identifier used in the shareable
+link), creator, status, created-at, updated-at.
+• FR7. A newly created Poll has status Draft.
+• FR8. The creator of a Draft poll can edit any of its fields, including the option list, the type,
+and the visibility.
+• FR9. The creator can delete a Draft poll. Deletion is irreversible.
+• FR10. Draft polls are visible only to their creator regardless of visibility setting.
+3.3 Poll lifecycle
+• FR11. Status is one of: Draft, Open, Closed.
+• FR12. The creator can publish a Draft poll, transitioning it to Open. Publishing requires at
+least 2 options. After publishing, the poll’s options, type, and visibility are locked and
+cannot be modified.
+• FR13. After publishing, the creator may extend the end-at to a later time but cannot move
+it earlier than the current moment. The creator may also close the poll manually at any
+time, transitioning it to Closed.
+• FR14. When a poll has an end-at and that time has passed, the poll must transition to
+Closed. Auto-closing on the next read or write touching the poll is acceptable; a
+background scheduler is not required.
+• FR15. A Closed poll cannot be reopened, edited, or voted on. Once Closed, the poll is
+read-only.
+
+• FR16. Once a poll is published, it cannot be deleted; the creator may close it but the
+historical poll and its votes are preserved.
+3.4 Visibility and shareable links
+• FR17. Every poll has a stable shareable URL containing an unguessable share-token (e.g.
+a 16+ character URL-safe random string). The token must be generated on poll creation
+and remain stable for the life of the poll.
+• FR18. Public polls: any authenticated user can access the poll detail and may vote (if the
+poll is Open). Public polls appear in the public feed (see 3.7).
+• FR19. Private polls: only the creator and explicitly invited users can access the poll detail
+or vote. Private polls do NOT appear in the public feed under any filter.
+• FR20. Access enforcement applies on every read and write touching a private poll —
+detail view, results, voting, and any related list — not just the listing. An authenticated user
+who is not invited and not the creator must not be able to view a private poll, even when
+supplied with the correct share URL.
+• FR21. An authenticated user with the correct share URL can reach the poll directly. For a
+public poll, the URL grants access. For a private poll, the URL grants access only if the
+user is the creator or an invitee; otherwise the user sees a clear “you do not have access
+to this poll” message (and not the poll’s title or details).
+3.5 Invitations (private polls only)
+• FR22. The creator of a private poll can invite an existing registered user by email.
+Invitations capture: poll, invited user, invited-by (= creator), invited-at.
+• FR23. The creator can revoke an invitation at any time. Revocation immediately removes
+the invitee’s access. If the revoked user had already voted, their vote remains counted; the
+historical vote is not deleted but the user can no longer view the poll detail or change their
+vote. The README should make this behaviour explicit.
+• FR24. An invitee list (showing invited users, invited-at, and who invited them) is visible to
+the creator of the private poll. It is not visible to invitees or other users.
+• FR25. Invitations may be added while the poll is in any status (Draft, Open, Closed).
+• FR26. Invitations apply only to private polls; attempts to add invitees to a public poll must
+be rejected with a clear message.
+3.6 Voting
+• FR27. An authenticated user with access to an Open poll can vote on it. For a Single-
+choice poll the user selects exactly one option; for a Multi-choice poll the user selects one
+or more options.
+• FR28. A user has at most one vote-set per poll. Submitting a vote on a poll the user has
+already voted on must replace the previous selection rather than create an additional vote.
+• FR29. A user cannot vote on a Draft or Closed poll. A user without access to a private poll
+cannot vote on it. Attempts via the UI must be prevented; attempts via the API must be
+rejected.
+• FR30. A user can withdraw their vote on an Open poll, removing their selections. Once
+withdrawn, the user may vote again before the poll closes.
+• FR31. Individual voters’ choices must not be visible to other users (including the creator).
+Each user can see their own vote; aggregate counts are public to everyone who can
+access the poll (subject to the results-visibility rule).
+3.7 Results
+
+• FR32. A poll’s results display, per option, the count of votes received and the percentage
+of respondents who selected it. A total-respondents figure (count of distinct users who
+voted) is also displayed.
+• FR33. For Single-choice polls the per-option percentages sum to 100%. For Multi-choice
+polls each option’s percentage is computed against total respondents, so percentages
+may sum to more than 100% — this is expected behaviour and should be acknowledged
+in the UI.
+• FR34. When the poll’s results-visibility setting is “Always visible,” any viewer with access
+to the poll sees results regardless of whether they have voted.
+• FR35. When the setting is “Visible after voting,” only users with access who have voted
+(and the poll’s creator) may see results while the poll is Open. Other viewers see a clear
+prompt explaining they must vote to see results.
+• FR36. Once a poll is Closed, results are visible to all viewers with access regardless of the
+results-visibility setting.
+3.8 Listing, filtering, sorting, pagination
+• FR37. The public feed shows Open and Closed PUBLIC polls only. Drafts are excluded
+from public lists; private polls never appear in the public feed under any filter.
+• FR38. A “My Polls” view shows polls created by the current user (all statuses, all
+visibilities) and is visible only to that user.
+• FR39. A “Shared with me” view shows private polls (Open or Closed) where the current
+user is an invitee but not the creator.
+• FR40. The public feed can be filtered by status (Open / Closed) and sorted by created-at,
+end-at, and total respondents, both ascending and descending.
+• FR41. All long list views must be paginated with a sensible default page size (e.g. 20).
+Pagination controls must be visible and functional; filters and sort apply across the
+paginated set.
+3.9 Persistence
+• FR42. All data — users, polls, options, votes, invitations — must persist across application
+restarts. Any storage approach is acceptable provided the choice is justified in the
+README.
+3.10 Validation
+• FR43. Poll title is required and must not be empty or whitespace-only.
+• FR44. A poll must have at least two options. Each option label is required and not empty
+or whitespace-only.
+• FR45. End-at, when set, must be in the future at the moment of publishing.
+• FR46. A vote submission must reference option IDs that belong to the poll being voted on.
+Submissions referencing other polls’ options must be rejected.
+• FR47. A vote on a Single-choice poll must include exactly one option ID. A vote on a Multi-
+choice poll must include one or more option IDs. Mismatches must be rejected with a clear
+message.
+• FR48. Invitation emails must reference an existing registered user. Attempts to invite a
+non-existent email should surface a clear message (or, optionally, a separate explicit
+invite-by-email-only flow if the candidate prefers to model deferred invitations).
+• FR49. Email addresses provided at registration must be syntactically valid and unique
+within the system.
+• FR50. All validation failures must surface clear, actionable messages.
+
+4. Acceptance Criteria
+• AC1. A new user can register, sign out, and sign back in successfully. Passwords are
+stored hashed (verifiable by inspecting the storage or code).
+• AC2. An unauthenticated visitor cannot reach any application screen or API endpoint
+without being redirected to sign-in or rejected.
+• AC3. A user can create a Draft poll with title, two or more options, a chosen type (Single or
+Multi), a chosen visibility (Public or Private), a chosen results-visibility setting, and an
+optional end-at.
+• AC4. Every poll has a stable shareable URL containing an unguessable token. The same
+URL works for the life of the poll.
+• AC5. The creator can edit any field of their own Draft poll, including changing visibility
+between Public and Private.
+• AC6. The creator can delete their own Draft poll; it disappears from their dashboard.
+• AC7. The creator can publish a Draft (status becomes Open). After publishing, attempts to
+change the options, type, or visibility are rejected with a clear message.
+• AC8. After publishing, the creator can extend the end-at to a later time, but cannot move it
+earlier than the current moment. The creator can manually close the poll at any time.
+• AC9. An Open poll whose end-at has passed transitions to Closed when next accessed.
+Once Closed, attempts to vote or to modify the poll are rejected with a clear message.
+• AC10. A public poll appears in the public feed for all authenticated users. Another
+authenticated user can open it via the feed or the share URL and (if entitled by results-
+visibility) view results.
+• AC11. A private poll does NOT appear in the public feed under any filter or sort, even for
+authenticated users.
+• AC12. An authenticated user who is neither the creator nor an invitee of a private poll
+cannot access the poll detail, results, or vote endpoint — even when given the correct
+share URL. The response shows a clear “no access” message that does not reveal the
+poll’s title or options.
+• AC13. The creator of a private poll can invite an existing registered user by email; the
+invitee then sees the poll on their “Shared with me” view and can access the detail via the
+share URL.
+• AC14. The creator of a private poll can revoke an invitation. The revoked user can no
+longer access the poll detail, vote, or change their vote. If they had already voted, that vote
+remains counted.
+• AC15. Attempts to add invitations to a public poll, or to invite a non-registered email, are
+rejected with a clear message.
+• AC16. An authenticated user with access can vote on a Single-choice Open poll by
+selecting exactly one option. Submitting fewer or more than one option is rejected with a
+clear message.
+• AC17. An authenticated user with access can vote on a Multi-choice Open poll by
+selecting one or more options. Submitting zero options is rejected with a clear message.
+• AC18. A user resubmitting a vote on a poll they have already voted on replaces their prior
+selection; total respondents and option counts reflect the new selection, not both.
+• AC19. A user can withdraw their vote on an Open poll, restoring them to a non-voter state.
+The poll counts decrement accordingly.
+• AC20. With results-visibility “Always visible,” any viewer with access to an Open poll sees
+the counts and percentages.
+• AC21. With results-visibility “Visible after voting,” a viewer with access who has not voted
+sees a “vote to see results” prompt and not the counts; a viewer who has voted sees the
+
+results; the creator always sees results. After the poll closes, all viewers with access see
+results.
+• AC22. Results display correct counts and percentages. For a Single-choice poll, per-
+option percentages sum to 100%. For a Multi-choice poll, the total-respondents figure is
+shown separately and per-option percentages may sum to more than 100%.
+• AC23. A user cannot vote on another user’s behalf, cannot tamper with counts via direct
+API calls, and cannot view another user’s individual selection.
+• AC24. The public feed, “My Polls,” and “Shared with me” views each return only the
+entries the viewer is entitled to see, support filtering and sorting as specified, and paginate
+correctly.
+• AC25. All data persists after stopping and restarting the application.
+5. Submission Requirements
+The candidate must submit a link to a public GitHub repository. The repository must include a
+README that contains the following sections.
+README must include
+• Setup &amp; run instructions. Any reviewer should be able to clone the repo and run the app
+locally in under 10 minutes.
+• Tech stack &amp; rationale. What was chosen and why, particularly the storage layer and the
+auth/password-hashing approach.
+• Architectural overview. A short description of how the code is organized (layers,
+modules, key files).
+• How AI tools were used. Which AI assistants were used; which parts of the codebase
+were AI-generated, AI-assisted, or hand-written; what was reviewed, edited, or rejected;
+anything surprising or worth flagging.
+• Assumptions. Anything assumed about scope, users, or environment.
+• Trade-offs. What was deliberately deprioritized and why, given the 6-hour budget.
+• Future work. What would be added or improved with more time.
+Required deliverables (beyond the README)
+• Incremental commit history. Commits should be incremental and meaningful so that
+reviewers can see how the work progressed. Single-commit submissions are discouraged.
+What is not required
+• Production deployment. Local-run is sufficient.
+• Unauthenticated / public-link voting. All voters must be signed-in users; the share URL
+controls discoverability, not authentication.
+• Password-protected polls or per-vote PINs. The Public/Private distinction with explicit
+invitee lists is sufficient.
+• Multi-question surveys. Each poll has exactly one question.
+• Real-time updates (websockets / live result refresh). Results refresh on page reload.
+• Charts or visualisations beyond simple bar / percent display.
+• Comments or discussion on polls.
+• Truly anonymous voting (votes are attributed internally for the one-vote-per-user rule, but
+never exposed to other users).
+• Email, SMS, or in-app push notifications — including invitation-acceptance notifications.
+• CSV or other export of results.
+
+• Scheduled-start polls (a poll opens immediately when published; future-start is out of
+scope).
+• Bulk inviting by uploading a CSV. Inviting one email at a time is sufficient.
+• Group / team / role-based invitations. Invitees are individual registered users.
+• Multi-tenant or organisation-level separation.
+What is welcomed but optional
+• Bar or pie-chart visualisations of results.
+• CSV export of results, scoped to the viewer’s access (only their own polls or polls they
+were invited to).
+• Bulk-inviting multiple users at once (comma-separated emails or selecting from a user list).
+• A simple notification panel that lists new invitations the user has received.
+• Future-start scheduling (a Draft becomes Open automatically at a chosen time).
+• Truly anonymous votes (no user attribution stored, with a different mechanism for the one-
+vote-per-user rule).
+• Containerization (Dockerfile, docker-compose).
+• Keyboard shortcuts, dark mode, or other UX niceties.

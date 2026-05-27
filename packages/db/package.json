@@ -1,0 +1,10 @@
+{
+  "name": "@pollaris/db",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "firebase-admin": "^13.10.0",
+    "@pollaris/config": "workspace:*"
+  }
+}

@@ -1,0 +1,14 @@
+.git/
+.github/
+**/node_modules/
+**/.next/
+**/.turbo/
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.env
+.env.local
+.env.*
+pnpm-debug.log

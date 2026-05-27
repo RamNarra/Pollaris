@@ -1,0 +1,10 @@
+[project]
+name = "agents"
+version = "1.0.0"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "firebase-admin>=6.5.0",
+    "google-antigravity==0.1.0",
+    "pydantic>=2.6.0"
+]
