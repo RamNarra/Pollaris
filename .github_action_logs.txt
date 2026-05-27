@@ -1,0 +1,759 @@
+build-and-push-image	Set up job	﻿2026-05-27T05:40:30.8078319Z Current runner version: '2.334.0'
+build-and-push-image	Set up job	2026-05-27T05:40:30.8103808Z ##[group]Runner Image Provisioner
+build-and-push-image	Set up job	2026-05-27T05:40:30.8104864Z Hosted Compute Agent
+build-and-push-image	Set up job	2026-05-27T05:40:30.8105443Z Version: 20260213.493
+build-and-push-image	Set up job	2026-05-27T05:40:30.8106005Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build-and-push-image	Set up job	2026-05-27T05:40:30.8106750Z Build Date: 2026-02-13T00:28:41Z
+build-and-push-image	Set up job	2026-05-27T05:40:30.8107401Z Worker ID: {7f7143a5-3b77-4dc5-b127-d532a0e3994a}
+build-and-push-image	Set up job	2026-05-27T05:40:30.8108107Z Azure Region: eastus
+build-and-push-image	Set up job	2026-05-27T05:40:30.8108716Z ##[endgroup]
+build-and-push-image	Set up job	2026-05-27T05:40:30.8110289Z ##[group]Operating System
+build-and-push-image	Set up job	2026-05-27T05:40:30.8110923Z Ubuntu
+build-and-push-image	Set up job	2026-05-27T05:40:30.8111348Z 24.04.4
+build-and-push-image	Set up job	2026-05-27T05:40:30.8112011Z LTS
+build-and-push-image	Set up job	2026-05-27T05:40:30.8112449Z ##[endgroup]
+build-and-push-image	Set up job	2026-05-27T05:40:30.8112979Z ##[group]Runner Image
+build-and-push-image	Set up job	2026-05-27T05:40:30.8113858Z Image: ubuntu-24.04
+build-and-push-image	Set up job	2026-05-27T05:40:30.8114460Z Version: 20260518.149.1
+build-and-push-image	Set up job	2026-05-27T05:40:30.8115692Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260518.149/images/ubuntu/Ubuntu2404-Readme.md
+build-and-push-image	Set up job	2026-05-27T05:40:30.8117476Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260518.149
+build-and-push-image	Set up job	2026-05-27T05:40:30.8119402Z ##[endgroup]
+build-and-push-image	Set up job	2026-05-27T05:40:30.8121325Z ##[group]GITHUB_TOKEN Permissions
+build-and-push-image	Set up job	2026-05-27T05:40:30.8124212Z Contents: read
+build-and-push-image	Set up job	2026-05-27T05:40:30.8124894Z Metadata: read
+build-and-push-image	Set up job	2026-05-27T05:40:30.8125383Z Packages: write
+build-and-push-image	Set up job	2026-05-27T05:40:30.8125939Z ##[endgroup]
+build-and-push-image	Set up job	2026-05-27T05:40:30.8128442Z Secret source: Actions
+build-and-push-image	Set up job	2026-05-27T05:40:30.8129411Z Prepare workflow directory
+build-and-push-image	Set up job	2026-05-27T05:40:30.8656983Z Prepare all required actions
+build-and-push-image	Set up job	2026-05-27T05:40:30.8694441Z Getting action download info
+build-and-push-image	Set up job	2026-05-27T05:40:31.2637773Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build-and-push-image	Set up job	2026-05-27T05:40:31.4292098Z Download action repository 'docker/login-action@v3' (SHA:c94ce9fb468520275223c153574b00df6fe4bcc9)
+build-and-push-image	Set up job	2026-05-27T05:40:31.6599188Z Download action repository 'docker/metadata-action@v5' (SHA:c299e40c65443455700f0fdfc63efafe5b349051)
+build-and-push-image	Set up job	2026-05-27T05:40:31.9228241Z Download action repository 'docker/build-push-action@v5' (SHA:ca052bb54ab0790a636c9b5f226502c73d547a25)
+build-and-push-image	Set up job	2026-05-27T05:40:32.2526850Z Complete job name: build-and-push-image
+build-and-push-image	Checkout repository	﻿2026-05-27T05:40:32.3345617Z ##[group]Run actions/checkout@v4
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3347155Z with:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3347977Z   repository: RamNarra/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3349450Z   token: ***
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3350267Z   ssh-strict: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3351163Z   ssh-user: git
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3351985Z   persist-credentials: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3353036Z   clean: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3354118Z   sparse-checkout-cone-mode: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3355123Z   fetch-depth: 1
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3356075Z   fetch-tags: false
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3356985Z   show-progress: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3357871Z   lfs: false
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3358712Z   submodules: false
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3359612Z   set-safe-directory: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3360831Z env:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3361696Z   REGISTRY: ghcr.io
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3362625Z   IMAGE_NAME: RamNarra/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3364106Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.3365425Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4399378Z Syncing repository: RamNarra/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4402387Z ##[group]Getting Git version info
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4404085Z Working directory is '/home/runner/work/Pollaris/Pollaris'
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4406167Z [command]/usr/bin/git version
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4472526Z git version 2.54.0
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4529965Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4546848Z Temporarily overriding HOME='/home/runner/work/_temp/39f39ee0-b7cb-4994-b3fb-c134a1451cd6' before making global git config changes
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4550505Z Adding repository directory to the temporary git global config as a safe directory
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4553187Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Pollaris/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4606770Z Deleting the contents of '/home/runner/work/Pollaris/Pollaris'
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4611566Z ##[group]Initializing the repository
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4616020Z [command]/usr/bin/git init /home/runner/work/Pollaris/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4733494Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4737128Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4740310Z hint: to use in all of your new repositories, which will suppress this warning,
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4742756Z hint: call:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4744721Z hint:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4745740Z hint: 	git config --global init.defaultBranch <name>
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4746979Z hint:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4748745Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4750609Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4752482Z hint:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4753987Z hint: 	git branch -m <name>
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4755085Z hint:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4756333Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4758469Z Initialized empty Git repository in /home/runner/work/Pollaris/Pollaris/.git/
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4762020Z [command]/usr/bin/git remote add origin https://github.com/RamNarra/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4805482Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4807071Z ##[group]Disabling automatic garbage collection
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4808834Z [command]/usr/bin/git config --local gc.auto 0
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4840753Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4842114Z ##[group]Setting up auth
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4847059Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.4883016Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5286681Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5321230Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5551545Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5586491Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5816601Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5854511Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5857276Z ##[group]Fetching the repository
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.5867515Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec:refs/remotes/origin/master
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9227558Z From https://github.com/RamNarra/Pollaris
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9229542Z  * [new ref]         810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec -> origin/master
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9268808Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9271005Z ##[group]Determining the checkout info
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9272755Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9276500Z [command]/usr/bin/git sparse-checkout disable
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9324175Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9351296Z ##[group]Checking out the ref
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9355657Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9515938Z Reset branch 'master'
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9518558Z branch 'master' set up to track 'origin/master'.
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9527959Z ##[endgroup]
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9575000Z [command]/usr/bin/git log -1 --format=%H
+build-and-push-image	Checkout repository	2026-05-27T05:40:32.9599181Z 810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Log in to the Container registry	﻿2026-05-27T05:40:32.9951483Z ##[group]Run docker/login-action@v3
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9952763Z with:
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9953426Z   registry: ghcr.io
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9954543Z   username: RamNarra
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9955702Z   password: ***
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9956416Z   logout: true
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9957105Z env:
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9957777Z   REGISTRY: ghcr.io
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9958571Z   IMAGE_NAME: RamNarra/Pollaris
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9959520Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:32.9960486Z ##[endgroup]
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:33.3251682Z Logging into ghcr.io...
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:33.3277665Z (node:2290) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:33.3280843Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-push-image	Log in to the Container registry	2026-05-27T05:40:33.5593117Z Login Succeeded!
+build-and-push-image	Extract metadata (tags, labels) for Docker	﻿2026-05-27T05:40:33.5871581Z ##[group]Run docker/metadata-action@v5
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5872596Z with:
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5873288Z   images: ghcr.io/RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5874469Z   tags: type=raw,value=latest
+build-and-push-image	Extract metadata (tags, labels) for Docker	type=sha
+build-and-push-image	Extract metadata (tags, labels) for Docker	
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5875426Z   context: workflow
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5876460Z   github-token: ***
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5877157Z env:
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5877786Z   REGISTRY: ghcr.io
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5878538Z   IMAGE_NAME: RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5879452Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.5880406Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.9889843Z (node:2310) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:33.9891508Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2016086Z ##[group]Context info
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2017464Z eventName: push
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2021438Z sha: 810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2022606Z ref: refs/heads/master
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2024068Z workflow: Publish Docker Image to GitHub Container Registry (GHCR)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2025278Z action: meta
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2026134Z actor: RamNarra
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2027003Z runNumber: 5
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2027842Z runId: 26493113595
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2029099Z commitDate: Wed May 27 2026 05:40:24 GMT+0000 (Coordinated Universal Time)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2030956Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2032402Z ##[group]Processing images input
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2035960Z name=ghcr.io/RamNarra/Pollaris,enable=true
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2038993Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2040589Z ##[group]Processing tags input
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2041675Z type=raw,value=latest,enable=true,priority=200
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2042874Z type=sha,prefix=sha-,format=short,enable=true,priority=100
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2044805Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2046204Z ##[group]Processing flavor input
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2047125Z latest=auto
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2047861Z prefix=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2048636Z prefixLatest=false
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2049450Z suffix=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2050247Z suffixLatest=false
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2051438Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2091377Z ##[group]Docker image version
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2092384Z latest
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2094123Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2097588Z ##[group]Docker tags
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2098329Z ghcr.io/ramnarra/pollaris:latest
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2106204Z ghcr.io/ramnarra/pollaris:sha-810ebd3
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2107450Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2182335Z ##[group]Docker labels
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2185642Z org.opencontainers.image.created=2026-05-27T05:40:34.204Z
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2186966Z org.opencontainers.image.description=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2189255Z org.opencontainers.image.licenses=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2190546Z org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2192080Z org.opencontainers.image.source=https://github.com/RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2193470Z org.opencontainers.image.title=Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2195236Z org.opencontainers.image.url=https://github.com/RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2197027Z org.opencontainers.image.version=latest
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2198459Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2199827Z ##[group]Annotations
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2200951Z manifest:org.opencontainers.image.created=2026-05-27T05:40:34.204Z
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2202271Z manifest:org.opencontainers.image.description=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2203438Z manifest:org.opencontainers.image.licenses=
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2205151Z manifest:org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2207931Z manifest:org.opencontainers.image.source=https://github.com/RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2209429Z manifest:org.opencontainers.image.title=Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2212021Z manifest:org.opencontainers.image.url=https://github.com/RamNarra/Pollaris
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2213394Z manifest:org.opencontainers.image.version=latest
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2215378Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2216333Z ##[group]JSON output
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2217049Z {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2217735Z   "tags": [
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2218524Z     "ghcr.io/ramnarra/pollaris:latest",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2219409Z     "ghcr.io/ramnarra/pollaris:sha-810ebd3"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2220378Z   ],
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2221116Z   "tag-names": [
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2221727Z     "latest",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2222478Z     "sha-810ebd3"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2223127Z   ],
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2223936Z   "labels": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2224819Z     "org.opencontainers.image.created": "2026-05-27T05:40:34.204Z",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2226273Z     "org.opencontainers.image.description": "",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2227639Z     "org.opencontainers.image.licenses": "",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2228951Z     "org.opencontainers.image.revision": "810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2230534Z     "org.opencontainers.image.source": "https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2231918Z     "org.opencontainers.image.title": "Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2233232Z     "org.opencontainers.image.url": "https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2234835Z     "org.opencontainers.image.version": "latest"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2235748Z   },
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2236402Z   "annotations": [
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2237298Z     "manifest:org.opencontainers.image.created=2026-05-27T05:40:34.204Z",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2238614Z     "manifest:org.opencontainers.image.description=",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2239773Z     "manifest:org.opencontainers.image.licenses=",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2241240Z     "manifest:org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2242906Z     "manifest:org.opencontainers.image.source=https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2244635Z     "manifest:org.opencontainers.image.title=Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2246036Z     "manifest:org.opencontainers.image.url=https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2247563Z     "manifest:org.opencontainers.image.version=latest"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2248585Z   ]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2249446Z }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2250856Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2252092Z ##[group]Bake file definition (tags)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2253256Z {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2254464Z   "target": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2255312Z     "docker-metadata-action": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2256197Z       "tags": [
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2257024Z         "ghcr.io/ramnarra/pollaris:latest",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2258018Z         "ghcr.io/ramnarra/pollaris:sha-810ebd3"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2258979Z       ],
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2259751Z       "args": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2260651Z         "DOCKER_META_IMAGES": "ghcr.io/ramnarra/pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2261707Z         "DOCKER_META_VERSION": "latest"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2262631Z       }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2263380Z     }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2264320Z   }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2265074Z }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2266551Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2268050Z ##[group]Bake file definition (labels)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2269064Z {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2269812Z   "target": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2271047Z     "docker-metadata-action": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2271949Z       "labels": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2272978Z         "org.opencontainers.image.created": "2026-05-27T05:40:34.204Z",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2274494Z         "org.opencontainers.image.description": "",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2275601Z         "org.opencontainers.image.licenses": "",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2276980Z         "org.opencontainers.image.revision": "810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2278583Z         "org.opencontainers.image.source": "https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2279950Z         "org.opencontainers.image.title": "Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2281256Z         "org.opencontainers.image.url": "https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2282643Z         "org.opencontainers.image.version": "latest"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2284501Z       }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2285023Z     }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2285428Z   }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2285873Z }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2286681Z ##[endgroup]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2287544Z ##[group]Bake file definition (annotations)
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2288128Z {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2288527Z   "target": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2288998Z     "docker-metadata-action": {
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2289549Z       "annotations": [
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2290264Z         "manifest:org.opencontainers.image.created=2026-05-27T05:40:34.204Z",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2291196Z         "manifest:org.opencontainers.image.description=",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2291998Z         "manifest:org.opencontainers.image.licenses=",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2293003Z         "manifest:org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2294536Z         "manifest:org.opencontainers.image.source=https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2295593Z         "manifest:org.opencontainers.image.title=Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2296630Z         "manifest:org.opencontainers.image.url=https://github.com/RamNarra/Pollaris",
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2297634Z         "manifest:org.opencontainers.image.version=latest"
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2298292Z       ]
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2298682Z     }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2299070Z   }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2299451Z }
+build-and-push-image	Extract metadata (tags, labels) for Docker	2026-05-27T05:40:34.2300148Z ##[endgroup]
+build-and-push-image	Build and push Docker image	﻿2026-05-27T05:40:34.2545732Z ##[group]Run docker/build-push-action@v5
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2546165Z with:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2546414Z   context: .
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2546659Z   push: true
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2547073Z   tags: ghcr.io/ramnarra/pollaris:latest
+build-and-push-image	Build and push Docker image	ghcr.io/ramnarra/pollaris:sha-810ebd3
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2549158Z   labels: org.opencontainers.image.created=2026-05-27T05:40:34.204Z
+build-and-push-image	Build and push Docker image	org.opencontainers.image.description=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.licenses=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Build and push Docker image	org.opencontainers.image.source=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.title=Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.url=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.version=latest
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2551110Z   load: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2551387Z   no-cache: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2551653Z   pull: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2552077Z   github-token: ***
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2552351Z env:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2552588Z   REGISTRY: ghcr.io
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2552875Z   IMAGE_NAME: RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2553258Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2553800Z   DOCKER_METADATA_OUTPUT_VERSION: latest
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2554375Z   DOCKER_METADATA_OUTPUT_TAGS: ghcr.io/ramnarra/pollaris:latest
+build-and-push-image	Build and push Docker image	ghcr.io/ramnarra/pollaris:sha-810ebd3
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2555024Z   DOCKER_METADATA_OUTPUT_TAG_NAMES: latest
+build-and-push-image	Build and push Docker image	sha-810ebd3
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2557061Z   DOCKER_METADATA_OUTPUT_LABELS: org.opencontainers.image.created=2026-05-27T05:40:34.204Z
+build-and-push-image	Build and push Docker image	org.opencontainers.image.description=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.licenses=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Build and push Docker image	org.opencontainers.image.source=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.title=Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.url=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	org.opencontainers.image.version=latest
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2561181Z   DOCKER_METADATA_OUTPUT_ANNOTATIONS: manifest:org.opencontainers.image.created=2026-05-27T05:40:34.204Z
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.description=
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.licenses=
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.source=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.title=Pollaris
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.url=https://github.com/RamNarra/Pollaris
+build-and-push-image	Build and push Docker image	manifest:org.opencontainers.image.version=latest
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2567893Z   DOCKER_METADATA_OUTPUT_JSON: {"tags":["ghcr.io/ramnarra/pollaris:latest","ghcr.io/ramnarra/pollaris:sha-810ebd3"],"tag-names":["latest","sha-810ebd3"],"labels":{"org.opencontainers.image.created":"2026-05-27T05:40:34.204Z","org.opencontainers.image.description":"","org.opencontainers.image.licenses":"","org.opencontainers.image.revision":"810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec","org.opencontainers.image.source":"https://github.com/RamNarra/Pollaris","org.opencontainers.image.title":"Pollaris","org.opencontainers.image.url":"https://github.com/RamNarra/Pollaris","org.opencontainers.image.version":"latest"},"annotations":["manifest:org.opencontainers.image.created=2026-05-27T05:40:34.204Z","manifest:org.opencontainers.image.description=","manifest:org.opencontainers.image.licenses=","manifest:org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec","manifest:org.opencontainers.image.source=https://github.com/RamNarra/Pollaris","manifest:org.opencontainers.image.title=Pollaris","manifest:org.opencontainers.image.url=https://github.com/RamNarra/Pollaris","manifest:org.opencontainers.image.version=latest"]}
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2573012Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_TAGS: /home/runner/work/_temp/docker-actions-toolkit-NXMhqV/docker-metadata-action-bake-tags.json
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2574492Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_LABELS: /home/runner/work/_temp/docker-actions-toolkit-NXMhqV/docker-metadata-action-bake-labels.json
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2575655Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_ANNOTATIONS: /home/runner/work/_temp/docker-actions-toolkit-NXMhqV/docker-metadata-action-bake-annotations.json
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2576927Z   DOCKER_METADATA_OUTPUT_BAKE_FILE: /home/runner/work/_temp/docker-actions-toolkit-NXMhqV/docker-metadata-action-bake.json
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.2577568Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5044382Z (node:2322) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5046632Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5064854Z ##[group]GitHub Actions runtime token ACs
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5072803Z refs/heads/master: read/write
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5074417Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5075365Z ##[group]Docker info
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5112928Z [command]/usr/bin/docker version
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5363169Z Client: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5364827Z  Version:           28.0.4
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5365937Z  API version:       1.48
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5366871Z  Go version:        go1.23.7
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5367780Z  Git commit:        b8034c0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5368624Z  Built:             Tue Mar 25 15:07:16 2025
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5370247Z  OS/Arch:           linux/amd64
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5371146Z  Context:           default
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5371716Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5372164Z Server: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5372948Z  Engine:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5373846Z   Version:          28.0.4
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5374738Z   API version:      1.48 (minimum version 1.24)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5375689Z   Go version:       go1.23.7
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5376483Z   Git commit:       6430e49
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5377390Z   Built:            Tue Mar 25 15:07:16 2025
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5378368Z   OS/Arch:          linux/amd64
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5379969Z   Experimental:     false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5380804Z  containerd:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5381540Z   Version:          v2.2.3
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5388820Z   GitCommit:        77c84241c7cbdd9b4eca2591793e3d4f4317c590
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5389877Z  runc:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5390617Z   Version:          1.3.5
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5391503Z   GitCommit:        v1.3.5-0-g488fc13e
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5392425Z  docker-init:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5393227Z   Version:          0.19.0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5394558Z   GitCommit:        de40ad0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:34.5406804Z [command]/usr/bin/docker info
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6907037Z Client: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6908344Z  Version:    28.0.4
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6910729Z  Context:    default
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6911146Z  Debug Mode: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6911503Z  Plugins:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6911816Z   buildx: Docker Buildx (Docker Inc.)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6912213Z     Version:  v0.34.0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6912514Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6912917Z   compose: Docker Compose (Docker Inc.)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6913208Z     Version:  v2.38.2
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6913505Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6914159Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6914255Z Server:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6914443Z  Containers: 0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6914651Z   Running: 0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6914854Z   Paused: 0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6915043Z   Stopped: 0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6915227Z  Images: 6
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6915425Z  Server Version: 28.0.4
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6915656Z  Storage Driver: overlay2
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6915903Z   Backing Filesystem: extfs
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6916120Z   Supports d_type: true
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6916369Z   Using metacopy: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6916578Z   Native Overlay Diff: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6916792Z   userxattr: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6917001Z  Logging Driver: json-file
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6917218Z  Cgroup Driver: systemd
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6917422Z  Cgroup Version: 2
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6917630Z  Plugins:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6917859Z   Volume: local
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6918207Z   Network: bridge host ipvlan macvlan null overlay
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6918643Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6919836Z  Swarm: inactive
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6920208Z  Runtimes: io.containerd.runc.v2 runc
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6920662Z  Default Runtime: runc
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6921041Z  Init Binary: docker-init
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6921564Z  containerd version: 77c84241c7cbdd9b4eca2591793e3d4f4317c590
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6922146Z  runc version: v1.3.5-0-g488fc13e
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6922564Z  init version: de40ad0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6922905Z  Security Options:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6924091Z   apparmor
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6924424Z   seccomp
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6924734Z    Profile: builtin
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6925036Z   cgroupns
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6925330Z  Kernel Version: 6.17.0-1013-azure
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6925723Z  Operating System: Ubuntu 24.04.4 LTS
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6926132Z  OSType: linux
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6926463Z  Architecture: x86_64
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6926794Z  CPUs: 4
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6927081Z  Total Memory: 15.61GiB
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6927424Z  Name: runnervmg397c
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6927808Z  ID: 030b3de5-f6f5-43f2-8bdc-0a866a274328
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6928411Z  Docker Root Dir: /var/lib/docker
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6928955Z  Debug Mode: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6929623Z  Username: githubactions
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6930096Z  Experimental: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6930442Z  Insecure Registries:
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6937289Z   ::1/128
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6937655Z   127.0.0.0/8
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6938021Z  Live Restore Enabled: false
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6938315Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6939440Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6940171Z ##[group]Proxy configuration
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6940620Z No proxy configuration found
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.6941332Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.7698011Z ##[group]Buildx version
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.7720512Z [command]/usr/bin/docker buildx version
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.8253428Z github.com/docker/buildx v0.34.0 3e73561e39785683b31b05eeab1ef645be44ca42
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.8286452Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.8287194Z ##[group]Builder info
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9822549Z {
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9823040Z   "nodes": [
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9823406Z     {
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9823996Z       "name": "default",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9824420Z       "endpoint": "default",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9824875Z       "status": "running",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9825300Z       "buildkit": "v0.20.2",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9825962Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/386",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9826687Z       "features": {
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9827356Z         "Automatically load images to the Docker Engine image store": true,
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9828075Z         "Cache export": true,
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9828573Z         "Direct push": true,
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9829065Z         "Docker exporter": true,
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9829597Z         "Multi-platform build": true,
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9830122Z         "OCI exporter": true
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9830553Z       },
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9830907Z       "labels": {
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9831559Z         "org.mobyproject.buildkit.worker.moby.host-gateway-ip": "172.17.0.1"
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9832235Z       }
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9832494Z     }
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9832759Z   ],
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9833026Z   "name": "default",
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9833384Z   "driver": "docker"
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9834042Z }
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:36.9834869Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.1233525Z [command]/usr/bin/docker buildx build --iidfile /home/runner/work/_temp/docker-actions-toolkit-GDd3aE/build-iidfile-f8ebb1beb5.txt --label org.opencontainers.image.created=2026-05-27T05:40:34.204Z --label org.opencontainers.image.description= --label org.opencontainers.image.licenses= --label org.opencontainers.image.revision=810ebd3df3af9efd7fe08cd7ac50c34ac3b67cec --label org.opencontainers.image.source=https://github.com/RamNarra/Pollaris --label org.opencontainers.image.title=Pollaris --label org.opencontainers.image.url=https://github.com/RamNarra/Pollaris --label org.opencontainers.image.version=latest --tag ghcr.io/ramnarra/pollaris:latest --tag ghcr.io/ramnarra/pollaris:sha-810ebd3 --metadata-file /home/runner/work/_temp/docker-actions-toolkit-GDd3aE/build-metadata-5be44348c2.json --push .
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4631444Z #0 building with "default" instance using docker driver
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4631993Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4632173Z #1 [internal] load build definition from Dockerfile
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4632836Z #1 transferring dockerfile: 2.36kB 0.0s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4633372Z #1 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4633565Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4634232Z #2 [auth] library/node:pull token for registry-1.docker.io
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4634861Z #2 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4635066Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.4635384Z #3 [internal] load metadata for docker.io/library/node:22-alpine
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.6147694Z #3 DONE 0.3s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8439172Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8439871Z #4 [internal] load .dockerignore
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8440425Z #4 transferring context: 186B done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8440915Z #4 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8441147Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8441321Z #5 [internal] load build context
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8441738Z #5 transferring context: 615.56kB 0.0s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8442447Z #5 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8442691Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8443324Z #6 [base 1/2] FROM docker.io/library/node:22-alpine@sha256:968df39aedcea65eeb078fb336ed7191baf48f972b4479711397108be0966920
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8444853Z #6 resolve docker.io/library/node:22-alpine@sha256:968df39aedcea65eeb078fb336ed7191baf48f972b4479711397108be0966920 done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8445963Z #6 sha256:757ec364de4d37cedf30871be2988927660834e656e9aa52aad9ac194814c30c 1.72kB / 1.72kB done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8447073Z #6 sha256:dd720352b0690b8fd0bde339dd11a4ae650bfa79f8be316a7d632377781f6cdf 6.52kB / 6.52kB done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8448548Z #6 sha256:968df39aedcea65eeb078fb336ed7191baf48f972b4479711397108be0966920 6.41kB / 6.41kB done
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8449304Z #6 DONE 0.1s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8449479Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:37.8449632Z #7 [base 2/2] RUN corepack enable
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.5313365Z #7 DONE 3.8s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7158438Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7159720Z #8 [runner 1/6] WORKDIR /app
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7160816Z #8 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7163349Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7164497Z #9 [runner 2/6] RUN addgroup --system --gid 1001 nodejs
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7165511Z #9 DONE 0.1s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7165888Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.7167988Z #10 [deps  1/11] RUN apk add --no-cache libc6-compat
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.8583812Z #10 ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.8584562Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.8585179Z #11 [runner 3/6] RUN adduser --system --uid 1001 nextjs
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:41.8585751Z #11 DONE 0.1s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.0086796Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.0087403Z #10 [deps  1/11] RUN apk add --no-cache libc6-compat
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.3055098Z #10 0.773 (1/3) Installing musl-obstack (1.2.3-r2)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4139218Z #10 0.776 (2/3) Installing libucontext (1.3.3-r0)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4140265Z #10 0.778 (3/3) Installing gcompat (1.1.0-r4)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4140923Z #10 0.783 OK: 11.0 MiB in 21 packages
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4141523Z #10 DONE 0.8s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4141754Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4142127Z #12 [deps  2/11] WORKDIR /app
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4142749Z #12 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4143090Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4143460Z #13 [deps  3/11] COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4144552Z #13 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4144861Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4145137Z #14 [deps  4/11] COPY apps/web/package.json ./apps/web/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4145820Z #14 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4146069Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4146579Z #15 [deps  5/11] COPY packages/ai/package.json ./packages/ai/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.4147446Z #15 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6221613Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6222855Z #16 [deps  6/11] COPY packages/config/package.json ./packages/config/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6224019Z #16 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6224326Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6224677Z #17 [deps  7/11] COPY packages/db/package.json ./packages/db/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6225378Z #17 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6226507Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6226904Z #18 [deps  8/11] COPY packages/logger/package.json ./packages/logger/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6227745Z #18 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6227976Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6228432Z #19 [deps  9/11] COPY packages/types/package.json ./packages/types/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6229225Z #19 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6229463Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6229800Z #20 [deps 10/11] COPY packages/ui/package.json ./packages/ui/
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6230611Z #20 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6230860Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6231223Z #21 [deps 11/11] RUN pnpm install --frozen-lockfile
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:42.6466469Z #21 0.175 ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-11.3.0.tgz
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:44.4352125Z #21 1.964 Scope: all 8 workspace projects
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:44.6904809Z #21 2.219 ? Verifying lockfile against supply-chain policies (862 entries)...
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:54.4149342Z #21 11.94 ✓ Lockfile passes supply-chain policies (862 entries in 9.7s)
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:54.5963131Z #21 11.95 Lockfile is up to date, resolution step is skipped
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:54.5964135Z #21 12.02 Progress: resolved 1, reused 0, downloaded 0, added 0
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:54.5964688Z #21 12.12 Packages: +749
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:54.5965157Z #21 12.12 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:55.4966106Z #21 13.03 Progress: resolved 749, reused 0, downloaded 91, added 37
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:56.5014526Z #21 14.03 Progress: resolved 749, reused 0, downloaded 247, added 149
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:57.5015693Z #21 15.03 Progress: resolved 749, reused 0, downloaded 278, added 159
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:58.5087264Z #21 16.04 Progress: resolved 749, reused 0, downloaded 414, added 220
+build-and-push-image	Build and push Docker image	2026-05-27T05:40:59.5094032Z #21 17.04 Progress: resolved 749, reused 0, downloaded 467, added 240
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:00.5105076Z #21 18.04 Progress: resolved 749, reused 0, downloaded 698, added 370
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:01.5104064Z #21 19.04 Progress: resolved 749, reused 0, downloaded 749, added 655
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:01.8642278Z #21 19.39 Progress: resolved 749, reused 0, downloaded 749, added 749, done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.3891240Z #21 19.92 .../node_modules/@firebase/util postinstall$ node ./postinstall.js
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4911401Z #21 19.92 .../node_modules/protobufjs postinstall$ node scripts/postinstall
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4924681Z #21 19.94 .../node_modules/unrs-resolver postinstall$ node postinstall.js
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4926121Z #21 19.94 .../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4927327Z #21 19.96 .../node_modules/@sentry/cli postinstall$ node ./scripts/install.js
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4928401Z #21 19.98 .../node_modules/@firebase/util postinstall: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4929177Z #21 20.00 .../node_modules/protobufjs postinstall: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.4930060Z #21 20.02 .../core-js@3.49.0/node_modules/core-js postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7286626Z #21 20.06 .../sharp@0.34.5/node_modules/sharp install: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7287959Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7289484Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: The project needs your help! Please consider supporting core-js:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7290702Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: > https://opencollective.com/core-js 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7291821Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: > https://patreon.com/zloirock 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7292820Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: > https://boosty.to/zloirock 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7294370Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: > bitcoin: bc1qlea7544qtsmj2rayg0lthvza9fau63ux0fstcz 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7296152Z #21 20.09 .../core-js@3.49.0/node_modules/core-js postinstall: I highly recommend reading this: https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7298051Z #21 20.10 .../node_modules/unrs-resolver postinstall: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7303293Z #21 20.10 .../core-js@3.49.0/node_modules/core-js postinstall: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.7304277Z #21 20.11 .../node_modules/@sentry/cli postinstall: Done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.9595759Z #21 20.49 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.9596212Z #21 20.49 devDependencies:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.9596629Z #21 20.49 + turbo 2.9.14
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:02.9596990Z #21 20.49 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:03.1737071Z #21 20.55 Done in 19.4s using pnpm v11.3.0
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.1308785Z #21 DONE 23.7s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3288804Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3289468Z #22 [builder 1/3] WORKDIR /app
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3289950Z #22 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3290094Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3290208Z #23 [builder 2/3] COPY . .
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3290454Z #23 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3290573Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.3290701Z #24 [builder 3/3] RUN pnpm build
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:06.8892999Z #24 0.711 $ turbo run build
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1376833Z #24 0.762 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1377262Z #24 0.762 Attention:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1377908Z #24 0.762 Turborepo now collects completely anonymous telemetry regarding usage.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1378780Z #24 0.762 This information is used to shape the Turborepo roadmap and prioritize features.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1379616Z #24 0.762 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1380329Z #24 0.762 https://turborepo.dev/docs/telemetry
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1380643Z #24 0.762 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1381072Z #24 0.762 • turbo 2.9.14
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1381672Z #24 0.794 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1382319Z #24 0.794    • Packages in scope: @pollaris/ai, @pollaris/config, @pollaris/db, @pollaris/logger, @pollaris/types, @pollaris/ui, web
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1382999Z #24 0.794    • Running build in 7 packages
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1383830Z #24 0.794    • Remote caching disabled
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1384207Z #24 0.794 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.1384590Z #24 0.809 web:build: cache miss, executing 4b6eea3781c9a915
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:07.5779874Z #24 1.399 web:build: $ next build
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:08.5062234Z #24 2.328 web:build: ▲ Next.js 16.2.6 (Turbopack)
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:08.6944009Z #24 2.328 web:build: - Experiments (use with caution):
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:08.6945074Z #24 2.328 web:build:   · clientTraceMetadata
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:08.6945466Z #24 2.329 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:08.6945814Z #24 2.365 web:build:   Creating an optimized production build ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:21.4651733Z #24 15.29 web:build: ✓ Compiled successfully in 12.3s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:21.6161535Z #24 15.29 web:build:   Running next.config.js provided runAfterProductionCompile ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:21.8574123Z #24 15.68 web:build: ✓ Completed runAfterProductionCompile in 392ms
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:22.0088924Z #24 15.68 web:build:   Running TypeScript ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:28.6974748Z #24 22.52 web:build:   Finished TypeScript in 6.8s ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:28.8504157Z #24 22.52 web:build:   Collecting page data using 3 workers ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3701792Z #24 23.19 web:build: [Environment Validation Warning]: Missing configurations in environment: production.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3702832Z #24 23.19 web:build: Errors:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3703538Z #24 23.19 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3705091Z #24 23.19 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3706162Z #24 23.19 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.3707197Z #24 23.19 web:build: Missing required environment variable: FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5490618Z #24 23.19 web:build: Missing required environment variable: FIREBASE_CLIENT_EMAIL
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5491850Z #24 23.19 web:build: Missing required environment variable: FIREBASE_PRIVATE_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5493422Z #24 23.19 web:build: Missing required environment variable: GEMINI_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5494618Z #24 23.19 web:build: Production FIREBASE_PRIVATE_KEY must be a valid PEM key.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5496486Z #24 23.22 web:build: [Environment Validation Warning]: Missing configurations in environment: production.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5497224Z #24 23.22 web:build: Errors:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5497765Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5498722Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5499568Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5500409Z #24 23.22 web:build: Missing required environment variable: FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5501085Z #24 23.22 web:build: Missing required environment variable: FIREBASE_CLIENT_EMAIL
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5501824Z #24 23.22 web:build: Missing required environment variable: FIREBASE_PRIVATE_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5502544Z #24 23.22 web:build: Missing required environment variable: GEMINI_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5503224Z #24 23.22 web:build: Production FIREBASE_PRIVATE_KEY must be a valid PEM key.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5509723Z #24 23.22 web:build: [Environment Validation Warning]: Missing configurations in environment: production.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5510714Z #24 23.22 web:build: Errors:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5511355Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5512343Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5514000Z #24 23.22 web:build: Missing required environment variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5514951Z #24 23.22 web:build: Missing required environment variable: FIREBASE_PROJECT_ID
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5515800Z #24 23.22 web:build: Missing required environment variable: FIREBASE_CLIENT_EMAIL
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5516719Z #24 23.22 web:build: Missing required environment variable: FIREBASE_PRIVATE_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5517552Z #24 23.22 web:build: Missing required environment variable: GEMINI_API_KEY
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.5518352Z #24 23.22 web:build: Production FIREBASE_PRIVATE_KEY must be a valid PEM key.
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:29.9505466Z #24 23.77 web:build:   Generating static pages using 3 workers (0/14) ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:30.4338644Z #24 24.26 web:build:   Generating static pages using 3 workers (3/14) 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:30.6377371Z #24 24.27 web:build:   Generating static pages using 3 workers (6/14) 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:30.6382913Z #24 24.27 web:build:   Generating static pages using 3 workers (10/14) 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:30.6385020Z #24 24.30 web:build: ✓ Generating static pages using 3 workers (14/14) in 531ms
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:30.6385816Z #24 24.31 web:build:   Finalizing page optimization ...
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.0801001Z #24 24.90 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2210879Z #24 24.90 web:build: Route (app)
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2212339Z #24 24.90 web:build: ┌ ○ /
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2213340Z #24 24.90 web:build: ├ ○ /_not-found
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2214673Z #24 24.90 web:build: ├ ƒ /api/assistant
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2215471Z #24 24.90 web:build: ├ ƒ /api/assistant/analyze
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2216165Z #24 24.90 web:build: ├ ƒ /api/auth/logout
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2216840Z #24 24.90 web:build: ├ ƒ /api/auth/session
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2217418Z #24 24.90 web:build: ├ ƒ /feed
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2217956Z #24 24.90 web:build: ├ ƒ /my-polls
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2218533Z #24 24.90 web:build: ├ ƒ /my-polls/[pollId]/edit
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2219116Z #24 24.90 web:build: ├ ƒ /my-polls/create
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2219687Z #24 24.90 web:build: ├ ƒ /p/[token]
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2220177Z #24 24.90 web:build: ├ ƒ /poll/[pollId]
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2220676Z #24 24.90 web:build: ├ ƒ /shared
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2221169Z #24 24.90 web:build: ├ ○ /sign-in
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2222085Z #24 24.90 web:build: └ ○ /sign-up
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2222505Z #24 24.90 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2222891Z #24 24.90 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2223371Z #24 24.90 web:build: ƒ Proxy (Middleware)
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2224098Z #24 24.90 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2224735Z #24 24.90 web:build: ○  (Static)   prerendered as static content
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2225517Z #24 24.90 web:build: ƒ  (Dynamic)  server-rendered on demand
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2226103Z #24 24.90 web:build: 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2226417Z #24 25.04 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2226791Z #24 25.04  Tasks:    1 successful, 1 total
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2227277Z #24 25.04 Cached:    0 cached, 1 total
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2227737Z #24 25.04   Time:    24.278s 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.2228146Z #24 25.04 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:31.9221166Z #24 DONE 25.7s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.2919095Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.2919791Z #25 [runner 4/6] COPY --from=builder /app/apps/web/public ./apps/web/public
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.4581688Z #25 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.4582024Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.4582471Z #26 [runner 5/6] COPY --from=builder --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:32.8201515Z #26 DONE 0.5s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0041145Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0042294Z #27 [runner 6/6] COPY --from=builder --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0043153Z #27 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0043327Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0043451Z #28 exporting to image
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.0044031Z #28 exporting layers
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:33.9149541Z #28 exporting layers 1.1s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1210538Z #28 writing image sha256:ad7ffce6c74de975b9a29ed95768cba3982b34c2fb412989a217c5c1a84b39ed done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1211361Z #28 naming to ghcr.io/ramnarra/pollaris:latest done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1212227Z #28 naming to ghcr.io/ramnarra/pollaris:sha-810ebd3 done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1212590Z #28 DONE 1.1s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1212730Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1212848Z #29 resolving provenance for metadata file
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1213174Z #29 DONE 0.0s
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1213295Z 
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1213457Z #30 pushing ghcr.io/ramnarra/pollaris:latest with docker
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1214265Z #30 pushing layer 5a9430c0063e
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1214539Z #30 pushing layer 6b7f65c9b2fe
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1214793Z #30 pushing layer 1940346ac9eb
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1215055Z #30 pushing layer 4a1a246bf941
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1215310Z #30 pushing layer 5fbf27a1c139
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1215569Z #30 pushing layer 8a264989f8e5
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1215819Z #30 pushing layer fdd79acd0b09
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1216075Z #30 pushing layer 27b8e0ac1f12
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1216323Z #30 pushing layer 529c8b21d05e
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1216576Z #30 pushing layer b993ff69822c
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1216830Z #30 pushing layer 29df493baa13
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1479519Z #30 pushing layer 5a9430c0063e 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1486422Z #30 pushing layer 6b7f65c9b2fe 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1487085Z #30 pushing layer 1940346ac9eb 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1487796Z #30 pushing layer 4a1a246bf941 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1488511Z #30 pushing layer 5fbf27a1c139 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1489135Z #30 pushing layer 8a264989f8e5 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1489709Z #30 pushing layer fdd79acd0b09 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1496215Z #30 pushing layer 27b8e0ac1f12 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1496645Z #30 pushing layer 529c8b21d05e 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1497119Z #30 pushing layer b993ff69822c 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1497527Z #30 pushing layer 29df493baa13 0.2s done
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1498012Z #30 ERROR: denied: permission_denied: write_package
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1498523Z ------
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1498800Z  > pushing ghcr.io/ramnarra/pollaris:latest with docker:
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1499105Z ------
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1543513Z ERROR: failed to build: denied: permission_denied: write_package
+build-and-push-image	Build and push Docker image	2026-05-27T05:41:34.1654289Z ##[error]buildx failed with: ERROR: failed to build: denied: permission_denied: write_package
+build-and-push-image	Post Build and push Docker image	﻿2026-05-27T05:41:34.1868419Z Post job cleanup.
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4252482Z ##[group]Removing temp folder /home/runner/work/_temp/docker-actions-toolkit-GDd3aE
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4258025Z (node:3241) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4259684Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4260715Z ##[endgroup]
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4261307Z ##[group]Post cache
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4262447Z State not set
+build-and-push-image	Post Build and push Docker image	2026-05-27T05:41:34.4263202Z ##[endgroup]
+build-and-push-image	Post Log in to the Container registry	﻿2026-05-27T05:41:34.4404898Z Post job cleanup.
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7581690Z ##[group]Logout from ghcr.io
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7605698Z (node:3249) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7606584Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7628489Z [command]/usr/bin/docker logout ghcr.io
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7780272Z Removing login credentials for ghcr.io
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7804690Z ##[endgroup]
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7805324Z ##[group]Post cache
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7806897Z State not set
+build-and-push-image	Post Log in to the Container registry	2026-05-27T05:41:34.7807762Z ##[endgroup]
+build-and-push-image	Post Checkout repository	﻿2026-05-27T05:41:34.8038201Z Post job cleanup.
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.8918662Z [command]/usr/bin/git version
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.8958185Z git version 2.54.0
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9031488Z Temporarily overriding HOME='/home/runner/work/_temp/6ea31dd8-2b99-47d4-a8b2-f62951779965' before making global git config changes
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9032796Z Adding repository directory to the temporary git global config as a safe directory
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9038421Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Pollaris/Pollaris
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9082619Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9119195Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9356860Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9388324Z http.https://github.com/.extraheader
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9399750Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9436641Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9674465Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-and-push-image	Post Checkout repository	2026-05-27T05:41:34.9712703Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-and-push-image	Complete job	﻿2026-05-27T05:41:35.0094780Z Cleaning up orphan processes
+build-and-push-image	Complete job	2026-05-27T05:41:35.0622565Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, docker/build-push-action@v5, docker/login-action@v3, docker/metadata-action@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

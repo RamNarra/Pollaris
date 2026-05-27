@@ -6,7 +6,7 @@ steps:
       - '-t'
       - 'us-central1-docker.pkg.dev/pollaris-497520/pollaris-repo/pollaris-web:latest'
       - '--build-arg'
-      - 'NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyDWDusjeN1O52eyxO1AsueeGQSoA9vQF-c'
+      - 'NEXT_PUBLIC_FIREBASE_API_KEY=SCRUBBED_API_KEY'
       - '--build-arg'
       - 'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=pollaris-497520.firebaseapp.com'
       - '--build-arg'
