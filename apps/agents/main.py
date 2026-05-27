@@ -76,6 +76,10 @@ class AnalyzeRequest(BaseModel):
     poll_id: str
     userId: str
 
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "Pollaris AI Agent API is running!", "docs": "/docs"}
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "firebase": len(firebase_admin._apps) > 0}

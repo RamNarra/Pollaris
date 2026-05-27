@@ -1,0 +1,114 @@
+[debug] [2026-05-27T08:41:08.627Z] ----------------------------------------------------------------------
+[debug] [2026-05-27T08:41:08.628Z] Command:       /usr/bin/node /home/p4cketsn1ff3r/.local/bin/firebase init
+[debug] [2026-05-27T08:41:08.629Z] CLI Version:   15.15.0
+[debug] [2026-05-27T08:41:08.629Z] Platform:      linux
+[debug] [2026-05-27T08:41:08.629Z] Node Version:  v22.22.2
+[debug] [2026-05-27T08:41:08.629Z] Time:          Wed May 27 2026 14:11:08 GMT+0530 (India Standard Time)
+[debug] [2026-05-27T08:41:08.629Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/p4cketsn1ff3r/Downloads/Projects/PalTech
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-05-27T08:41:29.936Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-27T08:41:29.937Z] > authorizing via signed-in user (ramcharannarra8@gmail.com)
+[debug] [2026-05-27T08:41:29.939Z] Checked if tokens are valid: false, expires at: 1779862271357
+[debug] [2026-05-27T08:41:29.939Z] Checked if tokens are valid: false, expires at: 1779862271357
+[debug] [2026-05-27T08:41:29.940Z] > refreshing access token with scopes: []
+[debug] [2026-05-27T08:41:29.944Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-27T08:41:29.944Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-27T08:41:30.130Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-27T08:41:30.131Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-27T08:41:30.134Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-05-27T08:41:30.841Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-05-27T08:41:30.841Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== App Hosting Setup
+[debug] [2026-05-27T08:41:32.807Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:32.807Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:32.807Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/pollaris-497520/billingInfo [none]
+[debug] [2026-05-27T08:41:34.220Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/pollaris-497520/billingInfo 200
+[debug] [2026-05-27T08:41:34.220Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/pollaris-497520/billingInfo {"name":"projects/pollaris-497520/billingInfo","projectId":"pollaris-497520","billingAccountName":"billingAccounts/015BCD-2A08CF-4FC0F9","billingEnabled":true}
+[debug] [2026-05-27T08:41:34.222Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.222Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.222Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.222Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.223Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.224Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.224Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:34.224Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/developerconnect.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.224Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/developerconnect.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:34.226Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/cloudbuild.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.226Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/cloudbuild.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:34.228Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/secretmanager.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.228Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/secretmanager.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:34.230Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/run.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.230Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/run.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:34.231Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/artifactregistry.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.231Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/artifactregistry.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:34.232Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/iam.googleapis.com [none]
+[debug] [2026-05-27T08:41:34.232Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/iam.googleapis.com  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:37.445Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/cloudbuild.googleapis.com 200
+[debug] [2026-05-27T08:41:37.445Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/cloudbuild.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.458Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/developerconnect.googleapis.com 200
+[debug] [2026-05-27T08:41:37.458Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/developerconnect.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.462Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/secretmanager.googleapis.com 200
+[debug] [2026-05-27T08:41:37.462Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/secretmanager.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.465Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/run.googleapis.com 200
+[debug] [2026-05-27T08:41:37.466Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/run.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.483Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/iam.googleapis.com 200
+[debug] [2026-05-27T08:41:37.484Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/iam.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.505Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/artifactregistry.googleapis.com 200
+[debug] [2026-05-27T08:41:37.505Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pollaris-497520/services/artifactregistry.googleapis.com [omitted]
+[debug] [2026-05-27T08:41:37.509Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:37.509Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:37.509Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts/firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-05-27T08:41:37.509Z] >>> [apiv2][(partial)header] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts/firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com:testIamPermissions  x-goog-user-project=pollaris-497520
+[debug] [2026-05-27T08:41:37.510Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts/firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-05-27T08:41:39.075Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts/firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-05-27T08:41:39.076Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts/firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-05-27T08:41:39.077Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:39.077Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:39.077Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts [none]
+[debug] [2026-05-27T08:41:39.077Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts {"accountId":"firebase-app-hosting-compute","serviceAccount":{"displayName":"Firebase App Hosting compute service account","description":"Default service account used to run builds and deploys for Firebase App Hosting"}}
+[debug] [2026-05-27T08:41:40.037Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts 409
+[debug] [2026-05-27T08:41:40.037Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/pollaris-497520/serviceAccounts [omitted]
+[debug] [2026-05-27T08:41:40.038Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:40.038Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:40.038Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:getIamPolicy [none]
+[debug] [2026-05-27T08:41:41.527Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:getIamPolicy 200
+[debug] [2026-05-27T08:41:41.527Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:getIamPolicy {"version":1,"etag":"BwZSxRocL6I=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:803271817886@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-803271817886@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.readTokenAccessor","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com","serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com","serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.computeRunner","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebaseapphosting.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-803271817886@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com","user:ramcharannarra8@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-803271817886@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.admin_withcond_e3274429a402c297fc5c","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]}]}
+[debug] [2026-05-27T08:41:41.528Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:41.528Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:41.528Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:setIamPolicy [none]
+[debug] [2026-05-27T08:41:41.528Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:setIamPolicy {"policy":{"version":1,"etag":"BwZSxRocL6I=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:803271817886@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-803271817886@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.readTokenAccessor","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com","serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com","serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.computeRunner","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebaseapphosting.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-803271817886@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com","user:ramcharannarra8@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-803271817886@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.admin_withcond_e3274429a402c297fc5c","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]},{"role":"roles/storage.objectViewer","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2026-05-27T08:41:42.538Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:setIamPolicy 200
+[debug] [2026-05-27T08:41:42.539Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pollaris-497520:setIamPolicy {"version":1,"etag":"BwZSyJS5A4A=","bindings":[{"role":"roles/artifactregistry.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-artifactregistry.iam.gserviceaccount.com"]},{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:803271817886@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-803271817886@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.readTokenAccessor","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/developerconnect.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com","serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com","serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.computeRunner","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/firebaseapphosting.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firebaseapphosting.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-803271817886@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-803271817886@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@pollaris-497520.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["serviceAccount:pollaris-agent@pollaris-497520.iam.gserviceaccount.com","user:ramcharannarra8@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-803271817886@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.admin_withcond_e3274429a402c297fc5c","members":["serviceAccount:service-803271817886@gcp-sa-devconnect.iam.gserviceaccount.com"]},{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:803271817886-compute@developer.gserviceaccount.com"]},{"role":"roles/storage.objectViewer","members":["serviceAccount:firebase-app-hosting-compute@pollaris-497520.iam.gserviceaccount.com"]}]}
+[info] i  This command links your local project to Firebase App Hosting. You will be able to deploy your web app with `firebase deploy` after setup. 
+[debug] [2026-05-27T08:41:47.550Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:47.550Z] Checked if tokens are valid: true, expires at: 1779874889131
+[debug] [2026-05-27T08:41:47.550Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/pollaris-497520/locations/-/backends 
+[debug] [2026-05-27T08:41:49.337Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/pollaris-497520/locations/-/backends 200
+[debug] [2026-05-27T08:41:49.337Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/pollaris-497520/locations/-/backends {}
