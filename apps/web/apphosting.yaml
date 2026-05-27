@@ -11,7 +11,7 @@ runConfig:
 env:
   # Firebase Client SDK (public — safe to include)
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: "SCRUBBED_API_KEY"
+    value: "AIzaSyDWDusjeN1O52eyxO1AsueeGQSoA9vQF-c"
     availability:
       - BUILD
       - RUNTIME
