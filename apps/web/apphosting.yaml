@@ -59,3 +59,7 @@ env:
     secret: GEMINI_API_KEY
     availability:
       - RUNTIME
+  - variable: AGENT_SERVER_URL
+    value: "https://pollaris-agent-803271817886.us-central1.run.app"
+    availability:
+      - RUNTIME

@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY pyproject.toml .
+
+RUN pip install --no-cache-dir fastapi uvicorn firebase-admin google-antigravity pydantic
+
+COPY . .
+
+# Expose port (Cloud Run defaults to 8080)
+ENV PORT 8080
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
