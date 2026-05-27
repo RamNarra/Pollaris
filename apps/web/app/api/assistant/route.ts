@@ -25,8 +25,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Prompt is required" }, { status: 400 });
     }
 
+    const agentUrl = process.env.AGENT_SERVER_URL || "http://localhost:8000";
+    
     // Forward request to Python Agent Server
-    const response = await fetch("http://localhost:8000/api/chat", {
+    const response = await fetch(`${agentUrl}/api/chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

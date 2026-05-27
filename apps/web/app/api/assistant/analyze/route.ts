@@ -31,8 +31,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Only the poll creator can run AI analytics" }, { status: 403 });
     }
 
-    // Forward request to FastAPI Agent Server
-    const response = await fetch("http://localhost:8000/api/analyze", {
+    const agentUrl = process.env.AGENT_SERVER_URL || "http://localhost:8000";
+    
+    // Forward request to Python Agent Server
+    const response = await fetch(`${agentUrl}/api/analyze`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
